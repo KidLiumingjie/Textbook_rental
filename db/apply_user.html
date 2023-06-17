@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="sample_style.css" type="text/css" />
+		<title>教科書租借系統</title>
+	</head>
+	<body>
+	
+		<!-- 網頁最上方的標題 -->
+		<header id="header">
+			<p align="center">教科書租借系統</p>			
+		</header>
+		
+		<!-- 網頁上方的工具列或訊息 -->
+		<nav id="nav">
+			
+			&nbsp;
+			<a href="/db/apply_user.html">租借申請</a>&nbsp;&nbsp;
+			<a href="/db/user_paypage2.php">繳費紀錄</a>&nbsp;&nbsp;
+			<a href="/db/user_applypage3.php">申請紀錄</a>&nbsp;&nbsp;
+			<a href="/db/textbook.php">查看書庫</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="/db/personal.php"><img src="person.png"  width="20px" height="20px"></a>&nbsp;&nbsp;
+			<a href="/db/logout.php"><img src="logout.png"  width="25px" height="25px"></a>
+			
+		</nav>
+		
+		
+		<!-- 網頁主要區塊 -->
+		<section id="section">
+			
+			<form action="apply_user.php" method="post">
+				<br>
+				<b>&nbsp;租借教科書</b><br><br>
+				<div id="section1">
+				</br>
+				<s>&nbsp;&nbsp;&nbsp;&nbsp;帳號&nbsp;&nbsp;:&nbsp;&nbsp;<input type="text" style="width:100px" name="apply_acc" size=1></s>&nbsp;&nbsp;
+				<s>&nbsp;&nbsp;&nbsp;&nbsp;書籍編號&nbsp;&nbsp;:&nbsp;&nbsp;<input type="number" style="width:30px" name="apply_num" size=1></s>&nbsp;&nbsp;
+				<!-- <s>人數&nbsp;&nbsp;:&nbsp;&nbsp;<input type="number"style="width:30px" name="apply_peo"></s> --></br></br>
+				<s>&nbsp;&nbsp;&nbsp;&nbsp;借用日期&nbsp;&nbsp;:&nbsp;&nbsp;<input type="date"style="width:120px" name="apply_dates"></s>
+				<d>借用時間&nbsp;&nbsp;:&nbsp;&nbsp;<input type="time"style="width:100px" name="apply_time"></d>
+				<d>借用時段(天)&nbsp;&nbsp;:&nbsp;&nbsp;<input type="number"style="width:30px" name="apply_ct"></d></br></br>
+				<!-- <s>&nbsp;&nbsp;&nbsp;&nbsp;開放時間&nbsp;&nbsp;:&nbsp;&nbsp;12:30-11:00(隔日)</s> --><br><br>
+				<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s>
+				<!-- <s>職員生&nbsp;&nbsp;:&nbsp;&nbsp;300元/營位</s>
+				<s>校外人士&nbsp;&nbsp;:&nbsp;&nbsp;600元/營位</s><br><br> -->
+				
+				 </div>
+				
+				<!-- <br><br>
+				<b>&nbsp;借用烤肉爐</b><br><br>
+				<div id="section1">
+				<br>
+				<s>&nbsp;&nbsp;&nbsp;&nbsp;烤肉爐&nbsp;&nbsp;:&nbsp;&nbsp;<input type="number" style="width:30px" name="apply_num2" size=1></s>&nbsp;&nbsp;
+				<s>人數&nbsp;&nbsp;:&nbsp;&nbsp;<input type="number"style="width:30px" name="apply_peo2"></s></br></br>
+				<s>&nbsp;&nbsp;&nbsp;&nbsp;借用日期&nbsp;&nbsp;:&nbsp;&nbsp;<input type="date"style="width:120px" name="apply_dates2"></s>
+				<d>借用時間&nbsp;&nbsp;:&nbsp;&nbsp;<input type="time"style="width:100px" name="apply_time2"></d>
+				<d>借用時段&nbsp;&nbsp;:&nbsp;&nbsp;<input type="number"style="width:30px"name= "apply_ct2"></d></br></br>
+				<s>&nbsp;&nbsp;&nbsp;&nbsp;開放時間&nbsp;&nbsp;:&nbsp;&nbsp;8:00-22:00</s><br><br>
+				<s>&nbsp;&nbsp;&nbsp;&nbsp;收費方式&nbsp;&nbsp;:&nbsp;&nbsp;四小時為一時段</s>
+				<s>職員生&nbsp;&nbsp;:&nbsp;&nbsp;300元/時段</s>
+				<s>校外人士&nbsp;&nbsp;:&nbsp;&nbsp;600元/時段</s><br><br> -->
+	
+				</div><br><br><center> <input type="submit" value="申請">
+	
+			</form>	
+		</section>
+		
+		<!-- 網頁下方的工具列或訊息 -->
+		<footer id="footer">
+			<h1>
+				© 2020 高雄大學 National University of Kaohsiung<br>
+				81148 高雄市楠梓區高雄大學路700號<br>
+				700, Kaohsiung University Rd., Nanzih District, Kaohsiung 811, Taiwan, R.O.C.<br>
+				高大總機:886-7-5919000 傳真號碼:886-7-5919083<br>
+				高大校園緊急聯絡電話:886-7-5917885 高大警衛室:886-7-5919009<br>
+			</h1>
+		</footer>
+		
+	</body>
+</html>

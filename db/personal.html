@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="sample_style.css" type="text/css" />
+		<title>Sample Rent Page</title>
+	</head>
+<?php
+
+
+    $location = "localhost";
+    $account = "root";
+    $password = "12345678";
+    
+    if(isset($location)&&isset($account)&&isset($password))
+    {
+      $link = mysql_pconnect($location,$account,$password);
+
+      if(!link)
+      {
+        echo'無法連接資料庫';
+        exit();
+
+      }
+}
+?>
+	<body>
+	
+		<!-- 網頁最上方的標題 -->
+		<header id="header">
+			<p align="center">高雄大學露營烤肉區租借系統</p>			
+		</header>
+		
+		
+		
+		<!-- 網頁左方的工具列或訊息 -->
+		<aside id="aside">
+			<a href="/linked_page_1.php">租借申請</a><br><br>
+			<a href="/linked_page_2.php">租借紀錄</a><br><br>
+			<a href="/linked_page_3.php">繳費紀錄</a><br><br>
+			<a href="/linked_page_4.php">其他頁面4</a><br><br>
+		</aside>
+		
+		<!-- 網頁主要區塊 -->
+		<section id="section">
+
+<body>
+<?php
+$filename='A108';
+
+
+
+ {
+  
+  $sql_query="select*from user where account='".$filename."'";
+  $result=mysql_query($sql_query);
+}
+   if(mysql_num_rows($result)==1)
+   {
+ 
+?>
+<p>會員修改<hr>
+
+<form method="get" action="memdata3.php">
+<center><table border=0 width=40%>
+
+<?php
+
+   while($row=mysql_fetch_array($result))
+   {
+?>
+<tr bgcolor=#D396FF>
+<td align="right"width=25%>會員帳號:</td>
+<td align="left"><input type=text maxLength="10" size="10" name="usrid"value=<?echo $row[0]?>>(中英文皆可)</td>
+
+<tr bgcolor=white >
+<td align="right">密碼:</td>
+<td align="left"><input type=text maxLength="10" size="10" name="passwd"value=<?echo $row[1]?>></td>
+
+<tr bgcolor=#FFABFF>
+<td align="right">Name:</td>
+<td align="left"><input type=text maxLength="10" size="20" name="Name"value=<?echo $row[2]?>></td>
+
+
+
+<tr bgcolor=#D396FF>
+<td align="right">Phone:</td>
+<td align="left">
+<input type=text size="20" name="phone"value=<?echo $row[3]?>></td>
+
+
+
+<tr bgcolor = pink>
+<td align = "right" width = 20%>Email:</td>
+<td align = "left"> <input type=text name=Email value=<?echo $row[4]?>></td>
+<input type=hidden name=oid value=<?echo$row[0]?>>
+
+<?php
+
+    }
+?>
+
+
+</table>
+<tr><td><input type="submit"value="送出">
+    <td><input type="reset"value="重新設定"></p>
+</form>
+<?php
+
+   }
+else
+  echo"Not Found!";
+?>
+			
+		</section>
+		
+		<!-- 網頁下方的工具列或訊息 -->
+		<footer id="footer">
+			<h1>
+				© 2015 高雄大學 National University of Kaohsiung<br>
+				81148 高雄市楠梓區高雄大學路700號<br>
+				700, Kaohsiung University Rd., Nanzih District, Kaohsiung 811, Taiwan, R.O.C.<br>
+				高大總機:886-7-5919000 傳真號碼:886-7-5919083<br>
+				高大校園緊急聯絡電話:886-7-5917885 高大警衛室:886-7-5919009<br>
+			</h1>
+		</footer>
+		
+	</body>
+</html>
